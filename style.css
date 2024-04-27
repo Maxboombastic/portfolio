@@ -1,0 +1,943 @@
+html{
+    width: 100%;
+}
+
+main,h1,h2,h3,h4,h5,h6,a,p{
+    margin: 0px;
+    font-family: 'karmina-sans';
+}
+
+@media only screen and (min-width:426px){
+   h2{
+    font-size: 2.5rem;
+    } 
+    h3{
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width:425px){
+    h2{
+     font-size: 1.8rem;
+     } 
+ }
+
+
+/* add sofia pro light for <p> */
+
+/* font-family: "karmina-sans", sans-serif;
+font-weight: 400;
+font-style: normal; */
+
+/* body *{
+    outline: red solid 2px;
+} */
+
+body{
+    height: auto;
+    width: 100vw;
+    background-color: rgb(69, 167, 209);
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+/* Header stuff */
+/* header > 425px */
+@media only screen and (min-width:426px){
+    header{
+        height: 12vh;
+        width: 100vw;
+        background-color: #34282C ;
+        opacity: 0.9;
+        position: fixed;
+        z-index: 10;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+/* header < 425px */
+@media only screen and (max-width:425px){
+    header{
+        height: 8vh;
+        width: 100vw;
+        background-color: #34282C ;
+        opacity: 0.9;
+        position: fixed;
+        z-index: 10;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+header .navbar {
+    height: 100%;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: space-evenly;
+    width: 52vw;
+    margin-right: 3vw;
+    position: relative;
+    /* top: 2vh; */
+}
+
+header .nav-logo{
+    height: 85%;
+    border: none;
+    padding: 1vh 1vw;
+}
+
+@media only screen and (min-width:769px){
+    .navbar a{
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;
+        opacity: 0.65;
+        text-align: center;
+        transition: opacity 0.1s ease-out 0.1s, border-bottom 0.15s ease-out 0.15s;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 426px) and (max-width:768px){
+    .navbar a{
+        font-size: 1rem;
+        color: white;
+        text-decoration: none;
+        opacity: 0.65;
+        text-align: center;
+        transition: opacity 0.1s ease-out 0.1s, border-bottom 0.15s ease-out 0.15s;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width:425px){
+    .navbar a{
+        font-size: 0.75rem;
+        color: white;
+        text-decoration: none;
+        opacity: 0.65;
+        text-align: center;
+        margin-right: 5vw;
+        transition: opacity 0.1s ease-out 0.1s, border-bottom 0.15s ease-out 0.15s;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+a:hover{
+    opacity: 1;
+    border-bottom: solid white 3px;
+}
+
+
+
+/* Hero image section */
+.hero-img{
+    padding-top: 12vh;
+    width: 100vw;
+    height: 55vh;
+    background-image: url('./media/maxi.jpg');
+    background-size: cover;
+    background-position: 0 28%;
+    position: relative;
+    top: 0;
+    z-index: 1;
+    margin-bottom: 3vh;
+    display: flex;
+    align-items: center;
+}
+
+/* hero h1 > 768px */
+@media only screen and (min-width:901px){
+    .hero-img h1{
+        left: 7vw;
+        font-size: 3rem;
+        position: relative;
+        width: max-content;
+        color: #255fb8;
+    }    
+}
+/* hero h1 < 768px */
+@media only screen and (max-width:900px){
+    .hero-img h1{
+        left: 2vw;
+        top: 15vh;
+        position: relative;
+        width: max-content;
+        color: #255fb8;
+    }
+}
+
+/* About Max section */
+#about-max{
+    background-color: #767676;
+    height: auto;
+    opacity: 0.9;
+    width: 100%;
+    padding-bottom: 2vh;
+}
+
+@media only screen and (max-width: 425px) {
+
+    #about-max h3{
+        padding: 3vh 2vw;
+        font-size: 1.25rem;
+        width: max-content;
+        height: max-content;
+        margin-left: 2.5vw;
+        margin-top: 1vh;
+    }
+    #about-max p{
+        margin: 0vh 2.5vw 2vh;
+        padding: 2vh 2vw;
+        border: #222 dashed 2px;
+        font-size: 0.82rem;
+    }
+}
+
+#about-max h2{
+    padding-left: 8vw;
+    padding-top: 7vh;
+}
+
+@media only screen and (min-width: 426px){
+    #about-max h3{
+        padding: 3vh 2vw;
+        font-size: 1.5rem;
+        width: max-content;
+        height: max-content;
+        margin-left: 2.5vw;
+        margin-top: 1vh;
+    }
+
+    #about-max p{
+        margin: 0vh 2.5vw 2vh;
+        padding: 2vh 2vw;
+        border: #222 dashed 2px;
+        font-size: 1rem;
+    }
+}
+
+/* about content > 900px */
+@media only screen and (min-width:901px){
+    .about-max-squares{
+            display: inline-flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 3vh 0;
+            width: 100%;
+    }
+    #bio-of-me{
+        width: 50vw;
+    }
+    #pic-of-saffy{
+        background-size: 150%;
+        width: 35vw;
+        background-image: url(./media/saffySofa.jpeg);
+        background-position: 15%;
+        max-height: 50vh;
+    }    
+}
+
+/* about content < 900px */
+@media only screen and (max-width:900px){
+    .about-max-squares{
+        display: inline-flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 3vh 0;
+        flex-wrap: wrap;
+    }
+    #bio-of-me{
+        width: 90vw;
+        margin-bottom: 3vh;
+    }
+        #pic-of-saffy{
+            background-size: cover;
+            width: 75vw;
+            background-image: url(./media/saffySofa.jpeg);
+            background-position: 15%;
+            max-height: 50vh;
+        } 
+}
+
+.about-max-squares div{
+    min-height: 50vh;
+    border: solid 1px black;
+    background-color: lightgray;
+    opacity: 0.75;
+}
+
+
+
+/* gallery grid */
+/* Have images greyed out but coloured when that one is hovered over? */
+
+#gallery{
+    background-color: #255fb8;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.galleryContainer div{
+    background-size: cover;
+    background-position: center;
+    border: groove gray 1px;
+}
+
+/* gallery > 768px (tablet) */
+@media only screen and (min-width:769px){
+
+    .galleryContainer{
+        background-color: #767676;
+        width: 90%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(34,10vh);
+        margin: 5vh 0;
+        gap: 10px;
+        border: groove #222 5px;
+    }
+
+    #gallery h2{
+        border-bottom: #222 double 3px;
+        border-right: #222 double 3px;
+        background-color: lightgray;
+        grid-area: 1/1/3/6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1vw;
+        padding-top: 1vh;
+        z-index: 5;
+    }
+        
+    #arlo{
+        background-image: url(./media/arlo.JPG);
+        grid-area: 2/4/7/7;
+        z-index: 1;
+    }
+
+    #billy{
+        background-image: url(./media/billy.jpg);
+        grid-area: 9/1/12/3;
+    }
+
+    #boat{
+        background-image: url(./media/boat.jpg);
+        grid-area: 6/8/9/13;
+        z-index: 4;
+    }
+
+    #char{
+        background-image: url(./media/char.jpg);
+        grid-area: 21/9/28/13;
+        z-index: 2;
+    }
+
+    #cparcs{
+        background-image: url(./media/cparcs.JPG);
+        grid-area: 12/8/15/13;
+        z-index: 4;
+    }
+
+    #creamnorth{
+        background-image: url(./media/creamnorth.jpg);
+        grid-area: 25/2/35/12;
+        z-index: 3;
+    }
+
+    #creamsouth{
+        background-image: url(./media/creamsouth.jpg);
+        grid-area: 1/7/6/13;
+    }
+
+    #ellie{
+        background-image: url(./media/ellie.jpg);
+        grid-area: 8/7/13/9;
+        z-index: 3;
+        background-size: 126%;
+        background-position-y: 75%;
+    }
+
+    #house{
+        background-image: url(./media/house.jpg);
+        grid-area: 14/8/21/13;
+        z-index: 2;
+    }
+
+    #jamesJordan{
+        background-image: url(./media/jamesJordan.jpg);
+        grid-area: 6/3/13/7;
+        background-size: 120%;
+        background-position-y: 18%;
+    }
+
+    #leonCanada{
+        background-image: url(./media/leonCanada.jpg);
+        grid-area: 16/1/21/6;
+        z-index: 1;
+    }
+
+    #lou{
+        background-image: url(./media/lou.jpg);
+        grid-area: 12/5/18/8;
+        z-index: 4;
+    }
+
+    #lou2{
+        background-image: url(./media/lou2.jpg);
+        grid-area: 3/1/9/4;
+    }
+
+    #nathan{
+        background-image: url(./media/nathan.jpg);
+        grid-area: 20/1/26/5;
+        z-index: 1;
+    }
+
+    #nathan2{
+        background-image: url(./media/nathan2.jpg);
+        grid-area: 5/6/9/8;
+        z-index: 3;
+    }
+
+    #parklife{
+        background-image: url(./media/parklife.jpg);
+        grid-area: 12/1/16/5;
+        z-index: 3;
+    }
+
+    #sam{
+        background-image: url(./media/sam.jpg);
+        grid-area: 18/5/25/9;
+    }
+
+    #wilkinson{
+        background-image: url(./media/wilkinson.jpg);
+        background-position: 0 40%;
+        grid-area: 9/9/12/13;
+        z-index: 2;
+    }
+}
+
+/* gallery < 768px (tablet) */
+@media only screen and (max-width:768px){
+        
+    .galleryContainer{
+        background-color: #767676;
+        width: 90%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(20,10vh);
+        margin: 5vh 0;
+        gap: 10px;
+        border: groove #222 5px;
+    }
+
+    #gallery h2{
+        border-bottom: #222 double 3px;
+        border-right: #222 double 3px;
+        background-color: lightgray;
+        grid-area: 1/1/3/4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1vw;
+        padding-top: 1vh;
+        z-index: 5;
+    }
+
+    #arlo{
+        background-image: url(./media/arlo.JPG);
+        grid-area: 3/3/5/6;
+        z-index: 2;
+    }
+
+    #billy{
+        background-image: url(./media/billy.jpg);
+        grid-area: 6/1/8/4;
+    }
+
+    #boat{
+        background-image: url(./media/boat.jpg);
+        grid-area: 4/6/6/9;
+        z-index: 3;
+        background-position-x: 36%;
+    }
+
+    #char{
+        background-image: url(./media/char.jpg);
+        grid-area: 15/6/19/9;
+        z-index: 2;
+    }
+
+    #cparcs{
+        background-image: url(./media/cparcs.JPG);
+        grid-area: 11/6/13/9;
+    }
+
+    #creamnorth{
+        background-image: url(./media/creamnorth.jpg);
+        grid-area: 18/1/21/7;
+        z-index: 2;
+    }
+
+    #creamsouth{
+        background-image: url(./media/creamsouth.jpg);
+        grid-area: 1/4/4/9;
+        z-index: 1;
+    }
+
+    #ellie{
+        background-image: url(./media/ellie.jpg);
+        grid-area: 8/1/13/4;
+    }
+
+    #house{
+        background-image: url(./media/house.jpg);
+        grid-area: 13/6/15/9;
+        z-index: 1;
+    }
+
+    #jamesJordan{
+        background-image: url(./media/jamesJordan.jpg);
+        grid-area: 4/3/9/7;
+    }
+
+    #leonCanada{
+        background-image: url(./media/leonCanada.jpg);
+        grid-area: 13/1/15/5;
+        z-index: 4;
+        background-position-y: 25%;
+    }
+
+    #lou{
+        background-image: url(./media/lou.jpg);
+        grid-area: 10/3/14/6;
+        z-index: 3;
+    }
+
+    #lou2{
+        background-image: url(./media/lou2.jpg);
+        grid-area: 3/1/6/4;
+    }
+
+    #nathan{
+        background-image: url(./media/nathan.jpg);
+        grid-area: 15/1/18/4;
+    }
+
+    #nathan2{
+        background-image: url(./media/nathan2.jpg);
+        grid-area: 6/7/8/9;
+        background-position-y: 40%;
+    }
+
+    #parklife{
+        background-image: url(./media/parklife.jpg);
+        grid-area: 8/1/10/4;
+    }
+
+    #sam{
+        background-image: url(./media/sam.jpg);
+        grid-area: 14/4/18/7;
+        background-position-y: 95%;
+    }
+
+    #wilkinson{
+        background-image: url(./media/wilkinson.jpg);
+        grid-area: 8/4/11/9;
+        background-position-y: 38%;
+    }
+}
+
+
+
+/* games section */
+#games{
+    background-color: #222;
+    height: auto;
+    padding: 4vh 0;
+}
+
+@media only screen and (max-width:600px){
+    #games h2 span{
+        display: none;
+    }    
+}
+
+#games h2{
+    position: relative;
+    top: 13vh;
+    left: 10vw;
+    width: 70vw;
+}
+
+.gamesContainer{
+    height: auto;
+    background-color: #255fb8;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 13vh;
+    width: 95%;
+    margin: 0 2.5%;
+}
+
+/* game > 1024px */
+@media only screen and (min-width:1024px){
+    .game{
+        background-color: #e8e8e8;
+        display: inline-flex;
+        border: solid #222 1px;
+        width: 43vw;
+        height: 52vh;
+        margin: 5vh 0vw;
+    }
+    .gameBio{
+        width: 60%;
+        height: 100%;
+    }
+    .gameBio p{
+        padding: 1.5vh 1.5vw;
+        padding-right: 0;
+    }
+    .gamePic{
+        width: 45%;
+        border: solid black 1px;
+        background-size: cover;
+        background-position: center;
+        margin: 2%;
+    }
+    #lethal{
+        background-image: url(./media/lethalCompany.jpg);
+        width: 50%;
+        height: 75%;
+        background-position: top;
+        margin-top: 8%;
+        margin-left: 0;
+    }
+}
+
+/* game < 1024px */
+@media only screen and (min-width:769px) and (max-width:1023px){
+    .game{
+        background-color: #e8e8e8;
+        display: inline-flex;
+        border: solid #222 1px;
+        width: 85vw;
+        height: 55vh;
+        margin: 3vh 0vw;
+    }
+    .gameBio {
+        width: 90%;
+        height: 100%;
+    }
+    .gameBio p{
+        padding: 2.5vh 2.5vw;
+        padding-right: 0;
+    }
+    .gamePic{
+        width: 45%;
+        border: solid black 1px;
+        background-size: cover;
+        background-position: center;
+        margin: 2%;
+    }
+    #lethal{
+        background-image: url(./media/lethalCompany.jpg);
+        background-position: top;
+        width: 65%;
+    }
+}
+
+/* game < 768px */
+@media only screen and (min-width:426px) and (max-width:768px){
+    .game{
+        background-color: #e8e8e8;
+        display: inline-flex;
+        border: solid #222 1px;
+        width: 85vw;
+        height: 55vh;
+        margin: 3vh 0vw;
+    }
+    .gameBio {
+        width: 90%;
+        height: 100%;
+    }
+    .gameBio p{
+        padding: 2.5vh 2.5vw;
+        padding-right: 0;
+    }
+    .gamePic{
+        width: 45%;
+        border: solid black 1px;
+        background-size: cover;
+        background-position: center;
+        margin: 2%;
+    }
+    #lethal{
+        background-image: url(./media/lethalCompany.jpg);
+        background-position: top;
+        width: 60%;
+    }
+}
+
+/* game < 425px */
+@media only screen and (max-width:425px){
+    .game{
+        background-color: #e8e8e8;
+        display: inline-flex;
+        border: solid #222 1px;
+        width: 85vw;
+        height: 58vh;
+        margin: 2vh 0vw;
+    }
+    .gameBio {
+        width: 90%;
+        height: 100%;
+    }
+    .gameBio p{
+        padding: 2.5vh 2.5vw;
+        padding-right: 0;
+        font-size: 0.75rem;
+    }
+    .gamePic{
+        width: 70%;
+        border: solid black 1px;
+        background-size: cover;
+        background-position: center;
+        margin: 2%;
+        height: 70%;
+        margin-top: 12%;
+    }
+    #lethal{
+        background-image: url(./media/lethalCompany.jpg);
+        background-position: top;
+        width: 100%;
+    }
+}
+
+/* @media only screen and (max-width:420px){
+    .gameBio p span{
+        display: none;
+    }    
+} */
+
+.gameBio h3{
+    padding: 3vh 5vw 0 3vw;
+    text-decoration: underline;
+}
+
+#siege{
+    background-image: url(./media/siege.jpg);
+    background-position: top;
+}
+
+#d2{
+    background-image: url(./media/d2.webp)
+}
+
+#hd2{
+    background-image: url(./media/hd2.avif)
+}
+
+#ftl{
+    background-image: url(./media/ftl.webp)
+}
+
+#phas{
+    background-image: url(./media/phasmophobia.jpg);
+    background-position-y: 30%;
+}
+
+/* contact-form stuff */
+
+/* contact-form > 768px */
+@media only screen and (min-width:768px) {
+    #contact-form{
+        width: 60vw;
+        height: auto;
+        padding: 10vh 20vw;
+    }
+    .form-box form{
+        background-color: #767676;
+        display: inline-flex;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        border: dashed 2px #222;
+        width: 48vw;
+        height: 65vh;
+        font-size: 1.2rem;
+        padding: 3vh 3vw;
+    }
+    .form-box{
+        border: solid 1px grey;
+        background-color: #222;
+        padding: 3vh 3vw 5vh;
+        height: 85vh;
+    }
+}
+
+/* contact form < 768px */
+@media only screen and (min-width:426px) and (max-width:768px) {
+    #contact-form{
+        width: 70vw;
+        height: auto;
+        padding: 10vh 15vw;
+    }
+    .form-box form{
+        background-color: #767676;
+        display: inline-flex;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        border: dashed 2px #222;
+        width: 57vw;
+        height: auto;
+        font-size: 1.2rem;
+        padding: 3vh 3vw;
+    }
+    .form-box{
+        border: solid 1px grey;
+        background-color: #222;
+        padding: 3vh 3vw 5vh;
+        height: auto;
+        }
+}
+
+/* contact form < 425px */
+@media only screen and (max-width:425px) {
+    #contact-form{
+        width: 90vw;
+        height: auto;
+        padding: 10vh 5vw;
+    }
+    .form-box form{
+        background-color: #767676;
+        display: inline-flex;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        border: dashed 2px #222;
+        width: 76vw;
+        height: auto;
+        font-size: 1.2rem;
+        padding: 3vh 3vw;
+    } 
+    .form-box{
+    border: solid 1px grey;
+    background-color: #222;
+    padding: 3vh 3vw 5vh;
+    height: auto;
+    }
+}
+
+
+
+.form-box h3{
+    font-size: 2.5rem;
+    padding: 2vh 0 2vh 4vw;
+    color: lightgrey;
+}
+
+input[type="text"], input[type="email"]{
+    margin: 3vh 0vw;
+    font-size: 1.3rem;
+    opacity: 0.5;
+    border: solid 1px #222;
+    max-width: 100%;
+}
+
+.form-box span{
+    margin: 1vh 2vw;
+}
+
+.vote{
+    margin: 1vh 3vw 3vh 3vw;
+}
+
+.vote label{
+    margin: 0;
+}
+
+.form-box #message-span{
+    margin-left: 1vw;
+    font-size: 1.3rem;
+}
+
+textarea{
+    resize: none;
+    font-size: 1.25rem;
+    opacity: 0.5;
+    border: solid 1px #222;
+    margin-top: 1vh;
+    width: 100%;
+}
+
+::placeholder{
+    color: #222;
+}
+
+@media only screen and (max-width:1023px){
+    .form-text{
+        display: none;
+    }
+}
+
+.form-text{
+    width: 23vw;
+    position: relative;
+    top: -65vh;
+    left: 30vw;
+}
+
+/* footer stuff */
+footer{
+    background-color: #34282C ;
+    height: 10vh;
+    width: 100vw;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img{
+    height: 6vh;
+    margin: 0 0.5vw 0 0;
+}
+
+footer p{
+    margin: 0 2vw 0 0;
+    font-size: 0.9rem;
+    color: lightgray;
+}
+
+/* Scrollbar stuff */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(80, 80, 80, 0.9);
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+  }
