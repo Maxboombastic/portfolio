@@ -6,6 +6,10 @@
         <link rel="stylesheet" href="./style.css">
         <link rel="stylesheet" href="https://use.typekit.net/gdj7qzi.css">
         <meta name="viewport" content="width=device-width">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+
+
     </head>
 
     <body>
@@ -19,8 +23,21 @@
                 <a href="#contact-form">Contact Us</a>
             </div>
         </header>
+       
+        <div id="sidebarButton">Button</div>
+
+        <div class="sidebar">
+            <div class="sidebarNav">
+                <a href="#about-max">About Max</a>
+                <a href="#gallery">Friends</a>
+                <a href="#games">Games</a>
+                <a href="#contact-form">Contact Us</a>
+            </div>
+        </div>
+        <div class="sidebarExtra"></div>
 
         <main>
+
             <div class="hero-img">
                 <h1>&emsp;The Life of<br><span style="font-size: 200%;">Maximillian</span></h1>
             </div>
@@ -140,7 +157,9 @@
                         </div>
 
                         <label id="message-span" for="message">Leave a message!<p style="font-size: 0.85rem; display: inline-block; text-decoration: none;">&emsp;(max length 300 characters)</p></label>
-                        <textarea id="message" name="message" rows="6" cols="35" maxlength="300"></textarea>
+                        <textarea id="message" name="message" rows="5" cols="35" maxlength="300"></textarea>
+
+                        <input id="submit" type="submit">
                     </form>
                     <div class="form-text">
                         <h4>Let me know what you think!</h4>
@@ -159,6 +178,36 @@
             <img src="./media/icons/phone.jpg">
             <p>(number)</p>
         </footer>
+
+        <script>
+            // $('#sidebarButton').click(function (){
+            //     $('.sidebar').toggleClass('sidebarOpen');
+            // });
+
+            // $('h1').click(function (){
+            //     $('.sidebar').toggleClass('sidebarOpen');
+            // });
+
+            // $('body:not(.sidebar header #sidebarButton)').click(function (){
+            //     $('.sidebar').toggleClass('sidebarOpen');
+            // })
+
+            $('#sidebarButton').click(function (){
+                $('.sidebar').toggleClass('sidebarMove')
+                $('.sidebarExtra').toggleClass('extraMove');
+            });
+
+            $('.sidebarExtra').click(function (){
+                $('.sidebar').removeClass('sidebarMove')
+                $('.sidebarExtra').removeClass('extraMove');
+            });
+
+            $('.sidebarNav').click(function(){
+                $('.sidebar').removeClass('sidebarMove')
+                $('.sidebarExtra').removeClass('extraMove');  
+            })
+
+            </script>
 
     </body>
 

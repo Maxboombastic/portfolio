@@ -2,12 +2,17 @@ html{
     width: 100%;
 }
 
-main,h1,h2,h3,h4,h5,h6,a,p{
+main,h1,h2,h3,h4,h5,h6,a,.hero-img span,#sidebarButton{
     margin: 0px;
     font-family: 'karmina-sans';
 }
 
-@media only screen and (min-width:426px){
+p,span,label,.sidebarNav a,input[type="submit"]{
+    margin: 0px;
+    font-family: 'sofia-pro';
+}
+
+@media (min-width:426px){
    h2{
     font-size: 2.5rem;
     } 
@@ -16,22 +21,11 @@ main,h1,h2,h3,h4,h5,h6,a,p{
     }
 }
 
-@media only screen and (max-width:425px){
+@media(max-width:425px){
     h2{
      font-size: 1.8rem;
      } 
  }
-
-
-/* add sofia pro light for <p> */
-
-/* font-family: "karmina-sans", sans-serif;
-font-weight: 400;
-font-style: normal; */
-
-/* body *{
-    outline: red solid 2px;
-} */
 
 body{
     height: auto;
@@ -39,11 +33,14 @@ body{
     background-color: rgb(69, 167, 209);
     margin: 0px;
     overflow-x: hidden;
+    /* outline: red solid 2px; */
 }
 
+
 /* Header stuff */
-/* header > 425px */
-@media only screen and (min-width:426px){
+
+/* header sizings */
+@media (min-width:426px){
     header{
         height: 12vh;
         width: 100vw;
@@ -56,8 +53,7 @@ body{
         align-items: center;
     }
 }
-/* header < 425px */
-@media only screen and (max-width:425px){
+@media (max-width:425px){
     header{
         height: 8vh;
         width: 100vw;
@@ -71,6 +67,9 @@ body{
     }
 }
 
+
+/* navbar */
+
 header .navbar {
     height: 100%;
     opacity: 1;
@@ -79,9 +78,8 @@ header .navbar {
     text-decoration: none;
     justify-content: space-evenly;
     width: 52vw;
-    margin-right: 3vw;
+    margin-right: 5vw;
     position: relative;
-    /* top: 2vh; */
 }
 
 header .nav-logo{
@@ -90,8 +88,9 @@ header .nav-logo{
     padding: 1vh 1vw;
 }
 
-@media only screen and (min-width:769px){
-    .navbar a{
+/* navbar a sizings */
+@media (min-width:769px){
+    .navbar a,#sidebarButton{
         font-size: 1.5rem;
         color: white;
         text-decoration: none;
@@ -100,12 +99,12 @@ header .nav-logo{
         transition: opacity 0.1s ease-out 0.1s, border-bottom 0.15s ease-out 0.15s;
         display: flex;
         align-items: center;
-        height: 100%;
+        height: 98%;
     }
 }
 
-@media only screen and (min-width: 426px) and (max-width:768px){
-    .navbar a{
+@media (min-width: 426px) and (max-width:768px){
+    .navbar a,#sidebarButton{
         font-size: 1rem;
         color: white;
         text-decoration: none;
@@ -114,12 +113,12 @@ header .nav-logo{
         transition: opacity 0.1s ease-out 0.1s, border-bottom 0.15s ease-out 0.15s;
         display: flex;
         align-items: center;
-        height: 100%;
+        height: 98%;
     }
 }
 
-@media only screen and (max-width:425px){
-    .navbar a{
+@media (max-width:425px){
+    .navbar a, #sidebarButton{
         font-size: 0.75rem;
         color: white;
         text-decoration: none;
@@ -129,18 +128,100 @@ header .nav-logo{
         transition: opacity 0.1s ease-out 0.1s, border-bottom 0.15s ease-out 0.15s;
         display: flex;
         align-items: center;
-        height: 100%;
+        height: 98%;
     }
 }
 
-a:hover{
+.navbar a:hover, #sidebarButton:hover{
     opacity: 1;
     border-bottom: solid white 3px;
 }
 
 
+/* Body */
+
+/* sidebar */
+/* 
+@media (min-width: 426px){
+    #sidebarButton{
+        display: none;
+    }
+}
+@media (max-width: 425px){
+    #sidebarButton{
+        position: absolute;
+        left: 95%;
+        top: 5%;
+    }
+} */
+
+#sidebarButton{
+    position: fixed;
+    left: 93%;
+    top: 2%;
+    z-index: 20;
+    height: 8vh;
+}
+
+.sidebar{
+    position: fixed;
+    left:0%;
+    margin-left: 120%;
+    width: 70vw;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    transition: all ease-in-out 500ms 100ms;
+}
+
+.sidebarNav{
+    margin: 10vh 5vw;
+    display: flex;
+    flex-flow: column;
+}
+
+@media (max-width:425px){
+    .sidebarNav a{
+        font-size: 2rem !important;
+    }    
+}
+
+.sidebarNav a{
+    font-size: 3rem;
+    color: #eeeeee;
+    transition: all ease-out 250ms 100ms;
+    width: max-content;
+    margin: 2.5vh 0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebarNav a:hover{
+    border-bottom: #eeeeee solid 5px;
+}
+
+.sidebarExtra{
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    margin-left: -100%;
+    width: 30vw;
+    height: 100%;
+    z-index: 10;
+}
+
+.sidebarMove{
+    margin-left: 30vw;
+}
+
+.extraMove{
+    margin-left: 0%;
+}
 
 /* Hero image section */
+
 .hero-img{
     padding-top: 12vh;
     width: 100vw;
@@ -156,8 +237,8 @@ a:hover{
     align-items: center;
 }
 
-/* hero h1 > 768px */
-@media only screen and (min-width:901px){
+/* hero h1 sizings */
+@media (min-width:901px){
     .hero-img h1{
         left: 7vw;
         font-size: 3rem;
@@ -166,8 +247,7 @@ a:hover{
         color: #255fb8;
     }    
 }
-/* hero h1 < 768px */
-@media only screen and (max-width:900px){
+@media (max-width:900px){
     .hero-img h1{
         left: 2vw;
         top: 15vh;
@@ -177,7 +257,9 @@ a:hover{
     }
 }
 
+
 /* About Max section */
+
 #about-max{
     background-color: #767676;
     height: auto;
@@ -186,7 +268,13 @@ a:hover{
     padding-bottom: 2vh;
 }
 
-@media only screen and (max-width: 425px) {
+#about-max h2{
+    padding-left: 8vw;
+    padding-top: 7vh;
+}
+
+/* about-max h3 and p sizings */
+@media (max-width: 425px){
 
     #about-max h3{
         padding: 3vh 2vw;
@@ -204,12 +292,7 @@ a:hover{
     }
 }
 
-#about-max h2{
-    padding-left: 8vw;
-    padding-top: 7vh;
-}
-
-@media only screen and (min-width: 426px){
+@media (min-width: 426px){
     #about-max h3{
         padding: 3vh 2vw;
         font-size: 1.5rem;
@@ -227,14 +310,14 @@ a:hover{
     }
 }
 
-/* about content > 900px */
-@media only screen and (min-width:901px){
+/* about-max content sizings */
+@media (min-width:901px){
     .about-max-squares{
-            display: inline-flex;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 3vh 0;
-            width: 100%;
+        display: inline-flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 3vh 0;
+        width: 100%;
     }
     #bio-of-me{
         width: 50vw;
@@ -248,8 +331,7 @@ a:hover{
     }    
 }
 
-/* about content < 900px */
-@media only screen and (max-width:900px){
+@media (max-width:900px){
     .about-max-squares{
         display: inline-flex;
         justify-content: space-evenly;
@@ -261,13 +343,13 @@ a:hover{
         width: 90vw;
         margin-bottom: 3vh;
     }
-        #pic-of-saffy{
-            background-size: cover;
-            width: 75vw;
-            background-image: url(./media/saffySofa.jpeg);
-            background-position: 15%;
-            max-height: 50vh;
-        } 
+    #pic-of-saffy{
+        background-size: cover;
+        width: 75vw;
+        background-image: url(./media/saffySofa.jpeg);
+        background-position: 15%;
+        max-height: 50vh;
+    } 
 }
 
 .about-max-squares div{
@@ -276,7 +358,6 @@ a:hover{
     background-color: lightgray;
     opacity: 0.75;
 }
-
 
 
 /* gallery grid */
@@ -296,8 +377,8 @@ a:hover{
     border: groove gray 1px;
 }
 
-/* gallery > 768px (tablet) */
-@media only screen and (min-width:769px){
+/* gallery sizings */
+@media (min-width:769px){
 
     .galleryContainer{
         background-color: #767676;
@@ -433,8 +514,7 @@ a:hover{
     }
 }
 
-/* gallery < 768px (tablet) */
-@media only screen and (max-width:768px){
+@media (max-width:768px){
         
     .galleryContainer{
         background-color: #767676;
@@ -566,15 +646,15 @@ a:hover{
 }
 
 
-
 /* games section */
+
 #games{
     background-color: #222;
     height: auto;
     padding: 4vh 0;
 }
 
-@media only screen and (max-width:600px){
+@media (max-width:600px){
     #games h2 span{
         display: none;
     }    
@@ -600,8 +680,8 @@ a:hover{
     margin: 0 2.5%;
 }
 
-/* game > 1024px */
-@media only screen and (min-width:1024px){
+/* game sizings */
+@media (min-width:1024px){
     .game{
         background-color: #e8e8e8;
         display: inline-flex;
@@ -635,8 +715,7 @@ a:hover{
     }
 }
 
-/* game < 1024px */
-@media only screen and (min-width:769px) and (max-width:1023px){
+@media (min-width:769px) and (max-width:1023px){
     .game{
         background-color: #e8e8e8;
         display: inline-flex;
@@ -667,8 +746,7 @@ a:hover{
     }
 }
 
-/* game < 768px */
-@media only screen and (min-width:426px) and (max-width:768px){
+@media (min-width:426px) and (max-width:768px){
     .game{
         background-color: #e8e8e8;
         display: inline-flex;
@@ -699,8 +777,7 @@ a:hover{
     }
 }
 
-/* game < 425px */
-@media only screen and (max-width:425px){
+@media (max-width:425px){
     .game{
         background-color: #e8e8e8;
         display: inline-flex;
@@ -734,7 +811,7 @@ a:hover{
     }
 }
 
-/* @media only screen and (max-width:420px){
+/* @media (max-width:420px){
     .gameBio p span{
         display: none;
     }    
@@ -767,10 +844,11 @@ a:hover{
     background-position-y: 30%;
 }
 
+
 /* contact-form stuff */
 
-/* contact-form > 768px */
-@media only screen and (min-width:768px) {
+/* contact-form sizings */
+@media (min-width:768px) {
     #contact-form{
         width: 60vw;
         height: auto;
@@ -784,7 +862,7 @@ a:hover{
         flex-direction: column;
         border: dashed 2px #222;
         width: 48vw;
-        height: 65vh;
+        height: 70vh;
         font-size: 1.2rem;
         padding: 3vh 3vw;
     }
@@ -792,12 +870,11 @@ a:hover{
         border: solid 1px grey;
         background-color: #222;
         padding: 3vh 3vw 5vh;
-        height: 85vh;
+        height: 90vh;
     }
 }
 
-/* contact form < 768px */
-@media only screen and (min-width:426px) and (max-width:768px) {
+@media (min-width:426px) and (max-width:768px) {
     #contact-form{
         width: 70vw;
         height: auto;
@@ -820,11 +897,10 @@ a:hover{
         background-color: #222;
         padding: 3vh 3vw 5vh;
         height: auto;
-        }
+    }
 }
 
-/* contact form < 425px */
-@media only screen and (max-width:425px) {
+@media (max-width:425px) {
     #contact-form{
         width: 90vw;
         height: auto;
@@ -849,8 +925,6 @@ a:hover{
     height: auto;
     }
 }
-
-
 
 .form-box h3{
     font-size: 2.5rem;
@@ -890,6 +964,15 @@ textarea{
     border: solid 1px #222;
     margin-top: 1vh;
     width: 100%;
+}
+
+input[type="submit"]{
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 1vh 1vw;
+    margin: 2vh 0px 0 3vw;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 ::placeholder{
