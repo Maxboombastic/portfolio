@@ -5,11 +5,9 @@
         <title>Maxiportfolio</title>
         <link rel="stylesheet" href="./style.css">
         <link rel="stylesheet" href="https://use.typekit.net/gdj7qzi.css">
+        <link href="./hamburgers-master/dist/hamburgers.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
-
-
     </head>
 
     <body>
@@ -24,7 +22,12 @@
             </div>
         </header>
        
-        <div id="sidebarButton">Button</div>
+        <button class="hamburger hamburger--spin" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+
 
         <div class="sidebar">
             <div class="sidebarNav">
@@ -180,33 +183,31 @@
         </footer>
 
         <script>
-            // $('#sidebarButton').click(function (){
-            //     $('.sidebar').toggleClass('sidebarOpen');
-            // });
-
-            // $('h1').click(function (){
-            //     $('.sidebar').toggleClass('sidebarOpen');
-            // });
-
-            // $('body:not(.sidebar header #sidebarButton)').click(function (){
-            //     $('.sidebar').toggleClass('sidebarOpen');
-            // })
-
-            $('#sidebarButton').click(function (){
+            $('.hamburger').click(function (){
                 $('.sidebar').toggleClass('sidebarMove')
                 $('.sidebarExtra').toggleClass('extraMove');
+                $('.hamburger').toggleClass('is-active');
             });
 
             $('.sidebarExtra').click(function (){
                 $('.sidebar').removeClass('sidebarMove')
                 $('.sidebarExtra').removeClass('extraMove');
+                $('.hamburger').removeClass('is-active');
             });
 
-            $('.sidebarNav').click(function(){
+            $('.sidebarNav a').click(function(){
                 $('.sidebar').removeClass('sidebarMove')
-                $('.sidebarExtra').removeClass('extraMove');  
+                $('.sidebarExtra').removeClass('extraMove');
+                $('.hamburger').toggleClass('is-active');
             })
 
+            $(document).on('click', 'a[href^="#"]', function (event) {
+                event.preventDefault();
+
+                $('html, body').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top
+                }, 500);
+            });
             </script>
 
     </body>
